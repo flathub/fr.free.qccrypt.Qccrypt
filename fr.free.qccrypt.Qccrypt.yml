@@ -1,8 +1,10 @@
 app-id: fr.free.qccrypt.Qccrypt
 runtime: org.kde.Platform
-runtime-version: 5.15-22.08
+runtime-version: 5.15-25.08
 sdk: org.kde.Sdk
 command: qccrypt
+rename-desktop-file: qccrypt.desktop
+rename-icon: qccrypt
 finish-args:
   - --filesystem=host
   # X11 + XShm access
@@ -11,8 +13,6 @@ finish-args:
   # Wayland access
   - --socket=wayland
   - --device=dri
-rename-desktop-file: qccrypt.desktop
-rename-icon: qccrypt
 modules:
   - name: ccrypt
     buildsystem: autotools
@@ -24,7 +24,5 @@ modules:
     buildsystem: qmake
     sources:
       - type: archive
-        url: http://qccrypt.free.fr/download/qccrypt-0.9.1-src.zip
-        sha256: be5de607330d152eb9ec75305866f9e0913c397a352c134cf4aa738b99614e69
-
-
+        url: http://qccrypt.free.fr/download/qccrypt-1.0.0-src.zip
+        sha256: c5ddd50da233f61c3e03fc8b8ac8323babb60da0fa287d6527c9491eead28242
